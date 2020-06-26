@@ -25,7 +25,7 @@ class CartContent
     private $product;
 
     /**
-     * @ORM\OneToOne(targetEntity=Cart::class, inversedBy="quantity", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=Cart::class, inversedBy="cartContent", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $cart;

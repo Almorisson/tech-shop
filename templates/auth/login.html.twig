@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Tech Shop - Login page' %}
+{% block body %}
+<div class="container row">
+    <div class="col-md-6">&nbsp</div>
+    <div class="col-md-6">
+        <div class="bg-light py-3 px-3">
+            <h1 class="text-capitalize mb-3">Connexion</h1>
+            {% if hasError %}
+                <div class="alert alert-danger">
+                    <p>L'adresse Email ou le mot de passe que vous avez entré est invalide.</p>
+                </div>
+            {% endif %}
+            <form action="{{ path('app_auth_login') }}" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="_username" id="email"
+                           placeholder="Entrer votre adresse Email" required value="{{ lastEmail }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" class="form-control" name="_password" id="password" placeholder="Enter votre mot de passe" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary mt-3" type="submit">Se connecter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+

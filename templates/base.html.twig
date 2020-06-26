@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>{% block title 'Tech Shop - Accueil' %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/app.css">
+    {% endblock %}
+</head>
+<body>
+{#-- NAV HEADER --#}
+{% include('partials/_header.html.twig') %}
+{#-- END OF NAV HEADER --#}
+
+{#-- FLASH MESSAGES --#}
+{% include('partials/_flashes.messages.html.twig') %}
+{#-- END OF FLASH MESSAGES --#}
+
+{#-- BODY --#}
+{% block body %}{% endblock %}
+{#-- END OF BODY --#}
+
+{#-- FOOTER --#}
+{% include('partials/_footer.html.twig') %}
+{#-- END OF FOOTER --#}
+
+{% block javascripts %}
+
+{% endblock %}
+</body>
 </html>
+

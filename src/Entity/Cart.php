@@ -18,7 +18,7 @@ class Cart
     private $id;
 
     /**
-     * @ORM\OneToOne(targetEntity=User::class, inversedBy="purchasedAt", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity=User::class, inversedBy="cart", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
