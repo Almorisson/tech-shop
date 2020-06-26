@@ -24,11 +24,8 @@ class ProductType extends AbstractType
             ->add('stock' TextType::class, [
                 'label' => 'NombreStock'
             ])
-            ->add('photo' TextType::class, [
+            ->add('photo' FileType::class, [
                 'label' => 'Photo'
-            ])
-            ->add('cartContent' TextType::class, [
-                'label' => 'Panier'
             ])
         ;
     }
