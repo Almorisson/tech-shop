@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    {{ 'nom_du_site' | trans }} - {{ 'add_a_new_product' | trans }}
+{% endblock %}
+
+{% block body %}
+    {% if user is same as(app.user) and is_granted("ROLE_ADMIN") %}
+        {{ include('products/_form.html.twig', {form: form, titleText: 'create_product_text', btnText:
+            'create_product_text' }) }}
+        {% else %}
+        <div class="alert alert-warning mt-5 m-auto text-center">
+            {{ 'cannot_add_a_product' | trans }}
+        </div>
+    {% endif %}
+{% endblock %}

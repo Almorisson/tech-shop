@@ -20,7 +20,7 @@ class Product
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nam�e;
+    private $name;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -86,6 +86,15 @@ class Product
         $this->price = $price;
 
         return $this;
+    }
+
+    /**
+     * Return a formatted value of the price
+     * @return string
+     */
+    public function getFormattedPrice(): string
+    {
+        return number_format($this->price, 0, '', ' ');
     }
 
     public function getStock(): ?int

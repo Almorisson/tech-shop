@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    {{ 'nom_du_site' }} - {{ 'password_modification_title' | trans }}
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h4>{{ 'password_modification_title' | trans }}</h4>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="btn btn-primary">
+            {{ 'update' | trans }}
+        </button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

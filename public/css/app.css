@@ -1,3 +1,9 @@
 div.container {
     margin-top: 20px;
 }
+
+.product-title {
+    padding: 2em;
+    background-size: cover;
+    background-position: center center;
+}

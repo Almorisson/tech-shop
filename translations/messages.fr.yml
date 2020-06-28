@@ -1,0 +1,44 @@
+panier: 'Ajouter au panier'
+nom_du_site: 'Tech boutique'
+supprimer: 'Supprimer'
+message_cart_vide: "Votre panier est vide"
+prix_produit: 'Prix du produit'
+nom_produit: 'Nom du Produit'
+stock_produit: 'Nombre de produits disponible en stock'
+message_boutique_vide: "La boutiques Tech Shop est actuellement vide et est en cours d'approvisionnement!"
+create_product_text:  'Créer un produit'
+accueil_text: "Accueil"
+products_text: "Produits"
+our_products_text: "Nos Produits"
+learn_more_text: "En savoir plus sur le produit"
+welcome_message: "Bienvenue à Tech Shop !"
+brief_presentation_text: "Tech Shop met à votre disposition des produits high-tech de très bonne qualité, moderne et dernière génération."
+commercial_presentation: "Vous recherchez un produit high-tech de qualité et moderne, foncez droit à notre boutiquer Tech Shop !"
+produits_fares_text: "Nos produits fares"
+see_our_products_text: "Voir nos produits"
+copyright_text: "&copy; Copyright 2020-2021 - Tech Shop - Tous droits réservés"
+delete_message: 'Le produit a été supprimé avec succès!'
+add_product_to_cart_message: "Le produit a été ajouté au panier avec succès"
+see: Voir
+deconnexion: 'Déconnexion'
+connexion: 'Connexion'
+inscription: 'Inscription'
+contact_boutique: 'Contacter la boutique'
+available_in_stock: 'Produits en stock'
+cannot_add_a_product: "Vous êtes uniquement autorisé à consulter les produits."
+add_a_new_product: 'Ajouter un nouveau produit'
+new_product_text: 'Nouveau produit'
+add_to_cart: 'Ajouter au panier'
+modifier: 'Modifier'
+edit_a_product: 'Modifier un produit'
+update: 'Mettre à jour'
+confirm_message: 'Voulez-vous vraiment supprimer ce produit ?'
+edit_message_success: 'The product information has been updated successfully!'
+profile_update_success: 'Les informations de votre profile ont été mise à jour avec succès !'
+profile_mofication_title: 'Modification de votre profil'
+profil_text: 'Profil'
+old_password_error: 'Le mot de passe entré et le mot de passe actuel ne correspondent pas'
+password_updated_success: 'Votre mot de passe a été mise à jour avec succès !'
+password_modification_title: 'Modification de mot passe'
+app_auth_password_update: 'Mettre à jour mon mot de passe'
+

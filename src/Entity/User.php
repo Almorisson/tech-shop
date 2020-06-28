@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -48,6 +50,7 @@ class User implements UserInterface
      */
     private $cart;
 
+
     public function getId(): ?int
     {
         return $this->id;
@@ -77,6 +80,15 @@ class User implements UserInterface
         return $this;
     }
 
+    /**
+     * Allow to return the full name of a user
+     *
+     * @return string
+     */
+    public function getFullName(): string
+    {
+        return "$this->firstName $this->lastName";
+    }
     public function getEmail(): ?string
     {
         return $this->email;
@@ -104,8 +116,8 @@ class User implements UserInterface
     public function getRoles(): ?array
     {
         $this->roles;
-        $roles[] = 'ROLE_USER';
-        return array_unique($roles);
+        //dd($this->roles);
+        return array_unique($this->roles);
     }
 
     public function setRoles(array $roles): self
@@ -155,4 +167,5 @@ class User implements UserInterface
     {
         // TODO: Implement eraseCredentials() method.
     }
+
 }

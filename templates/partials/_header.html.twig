@@ -1,31 +1,49 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="{{ path('app_home') }}">
-        Tech Shop
+        {{ 'nom_du_site' | trans }}
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_home') }}">Accueil</a>
+                <a class="nav-link" href="{{ path('app_home') }}">{{ 'accueil_text' | trans }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('app_home') }}">Produits</a>
+                <a class="nav-link" href="{{ path('app_products_index') }}">{{ 'products_text' | trans }}</a>
             </li>
+            {% if is_granted("ROLE_ADMIN") %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_products_new') }}">{{ 'new_product_text' | trans }}</a>
+                </li>
+            {% endif %}
         </ul>
         <ul class="navbar-nav ml-auto">
             {% if app.user %}
                 <li class="nav-item">
-                    <a href="{{ path('account_logout') }}" class="nav-link">Déconnexion</a>
+                    <a href="{{ path('app_auth__password_update') }}" class="nav-link">
+                        {{ 'app_auth_password_update' | trans }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('app_auth_profile') }}" class="nav-link">
+                        {{ 'profil_text' | trans }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('app_auth_logout') }}" class="nav-link">
+                        {{ 'deconnexion' | trans }}
+                    </a>
                 </li>
             {% else %}
                 <li class="nav-item">
-                    <a href="{{ path('app_auth_login') }}" class="nav-link">Connexion</a>
+                    <a href="{{ path('app_auth_login') }}" class="nav-link">{{ 'connexion' | trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ path('app_auth_register') }}" class="nav-link">Inscription</a>
+                    <a href="{{ path('app_auth_register') }}" class="nav-link">{{ 'inscription' | trans }}</a>
                 </li>
             {% endif %}
         </ul>

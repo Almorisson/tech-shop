@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title '{{ nom_du_site | trans }} - {{ product.name }}' %}
+{% block body %}
+
+<div class="product-title" style="background-image: url({{ asset('uploads/productPhoto/' ~ product.photo) }});">
+    <div class="container" style="color: white;text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);">
+        <h1>{{ product.name  }}</h1>
+        <h4> {{ product.stock }} {{ 'available_in_stock' | trans }}</h4>
+        <div class="text-primary" style="font-size: 4rem; font-weight: bold;">
+            {{ product.formattedPrice }} &euro;
+        </div>
+        <a href="#" class="btn btn-primary mb-3">{{ 'contact_boutique' | trans }}</a>
+    </div>
+</div>
+<div class="container mt-4">
+    <p>
+        {{ product.description | nl2br }}
+    </p>
+    <div class="row">
+        <div class="col-md-8">
+            <h2>{{ 'Caractéristiques' }}</h2>
+            <table class="table table-striped">
+                <tr>
+                    <td>{{ 'nom_produit' | trans }}</td>
+                    <td> {{ product.name }}</td>
+                </tr>
+                <tr>
+                    <td>{{ 'prix_produit' | trans }}</td>
+                    <td>{{ product.price }}&euro;</td>
+                </tr>
+                <tr>
+                    <td>{{ 'stock_produit' | trans }}</td>
+                    <td> {{ product.stock }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row container">
+       <div class="col-md-4">
+           <a class="btn btn-success" href="#">
+               {{ 'add_to_cart' | trans }}
+           </a>
+       </div>
+        {% if is_granted("ROLE_ADMIN") %}
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="{{ path('app_products_edit', { id: product.id}) }}" class="btn btn-primary">
+                            {{ 'modifier' | trans }}
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        {{ include('products/_delete.html.twig')}}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

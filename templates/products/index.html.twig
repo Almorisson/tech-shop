@@ -1,20 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProductsController!{% endblock %}
+{% block title 'Tech Shop - Nos produits' %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/morisson/IPSSI/22_06_20/projet/tech-shop/src/Controller/ProductsController.php'|file_link(0) }}">src/Controller/ProductsController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/morisson/IPSSI/22_06_20/projet/tech-shop/templates/products/index.html.twig'|file_link(0) }}">templates/products/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <div class="jumbotron text-center">
+            <h1 class="text-center">{{ 'welcome_message' | trans }}</h1>
+            <p>{{ 'brief_presentation_text' | trans }}</p>
+            <small>{{ 'commercial_presentation' | trans }}</small>
+        </div>
+        <div class="container">
+            <h2 class="mb-3 text-center">{{ 'our_products_text' | trans }}</h2>
+            {%  if products is not empty %}
+                <div class="row flex">
+                    {% for product in products %}
+                        {% set url = path("app_products_show", {id: product.id}) %}
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <a href="{{ url }}">
+                                        <img src="{{ asset('uploads/productPhoto/' ~ product.photo) }}" alt="Photo du
+                                        produit {{
+                                        product.name}}" style="height: 200px; width: 100%; display: block;" />
+                                    </a>
+                                    <div class="card-title">
+                                        <h5>
+                                            <a href="{{ path('app_products_show', {id: product.id}) }}">{{ product.name }}</a>
+                                        </h5>
+                                    </div>
+                                    <div class="text-primary" style="font-weight: bold; font-size: 2rem;">{{ product.getFormattedPrice() }} €</div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p class="text-center mt-5 mb-5">{{ 'message_boutique_vide' | trans }}</p>
+            {% endif %}
+        </div>
 {% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'nom_du_site' | trans }} - {{ 'edit_a_product' | trans }}{% endblock %}
+
+{% block body %}
+    {{ include('products/_form.html.twig', { form: form, titleText: 'edit_a_product', btnText: 'update' }) }}
+{% endblock %}

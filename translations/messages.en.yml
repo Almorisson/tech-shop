@@ -1,0 +1,43 @@
+panier: 'Add to cart '
+nom_du_site: 'Tech Shop'
+supprimer: 'Delete'
+message_cart_vide: "Your cart is empty."
+prix_produit: 'Price of the product'
+nom_produit: 'Product name'
+stock_produit: 'Number of products available in stock'
+message_boutique_vide: 'The Tech Shop is currently empty and is being stocked!'
+create_product_text:  'Create a product'
+accueil_text: "Home"
+products_text: "Products"
+our_products_text: "Our Products"
+learn_more_text: "Learn more on the product"
+welcome_message: "Welcome to Tech Shop !"
+brief_presentation_text: "Tech Shop offers high-tech products of the latest quality."
+commercial_presentation: "If you are looking for a high-tech, quality and modern product, go straight to our Tech Shop!"
+produits_fares_text: "Our main products"
+see_our_products_text: "See our products"
+copyright_text: "&copy; Copyright 2020-2021 - Tech Shop - All rights reserved"
+delete_message: 'The product has been successfully removed!'
+add_product_to_cart_message: "The product has been successfully added to the cart!"
+see: See
+deconnexion: 'Logout'
+connexion: 'Login'
+inscription: 'Registration'
+contact_boutique: 'Contact the shop'
+available_in_stock: 'Products in stock'
+cannot_add_a_product: "You are only authorized to view the products."
+add_a_new_product: 'Add a new product'
+new_product_text: 'New Product'
+add_to_cart: 'Add to cart'
+modifier: 'Edit'
+edit_a_product: 'Edit a product'
+update: 'Update'
+confirm_message: 'Do you really want to remove this product?'
+edit_message_success: 'Les informations du produit ont été mise à jour avec succès !'
+profile_update_success: 'Your profile information has been successfully updated!'
+profile_mofication_title: 'Modification of your profile'
+profil_text: 'Profile'
+old_password_error: 'Entered password and current password do not match'
+password_updated_success: 'Your password has been successfully updated!'
+password_modification_title: 'Changing your password'
+app_auth_password_update: 'Update my password'
