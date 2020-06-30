@@ -41,4 +41,8 @@ old_password_error: 'Le mot de passe entré et le mot de passe actuel ne corresp
 password_updated_success: 'Votre mot de passe a été mise à jour avec succès !'
 password_modification_title: 'Modification de mot passe'
 app_auth_password_update: 'Mettre à jour mon mot de passe'
+error_page: 'Erreur'
+404_error_page: 'Page Non Trouvé !'
+403_error_page: 'Non autorisé !'
+500_error_page: 'Erreur au niveau du serveur!'
 

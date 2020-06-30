@@ -1,0 +1,11 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ '500_error_page' | trans }}</h1>
+
+    <p>
+        Server error !
+        <a href="{{ path('app_home') }}">Back to the homepage</a>.
+    </p>
+{% endblock %}
